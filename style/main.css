@@ -1,0 +1,159 @@
+
+body {
+    background-color: black;
+    margin: 0;
+
+} 
+
+.qwe {
+    height: 100vh;
+} 
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: fixed; 
+    top: 0;
+    z-index: 100; /* Ensure the header is above everything */
+}
+.bord{
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 40px;
+    text-align: center;
+    transition: all 0.5s;
+    
+}
+.bord:hover{
+    border-color: white;
+    background-color: black;
+}
+a {
+    text-decoration: none;  
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    transition: color 0.55s;
+}
+.bord:hover a{
+    color: white;
+}
+
+.back {
+    width: 100%;
+    height: 100vh; 
+    
+    background-image: url(/images/backgrounds/main.jpg);
+
+    /* FIXED BACKGROUND PROPERTIES */
+    background-attachment: fixed; /* kat5eli tswira fblastha o l page katle3 */
+    background-size: cover;      /* tswira takxed mn l9ont tal 9ont */
+    background-position: center; /* tswira katji lwest diyal lpage*/
+    background-repeat: no-repeat;
+
+    /* Center welcome to carhub inside the .back div */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.back h2 {
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+}
+
+h2{
+    text-shadow: 12px 5px 12px black ;
+    
+}
+
+                /* main body */
+
+main{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 3px solid var(--luxury-gold, #FFC300);
+    border-radius: 20px;
+    padding: 50%;
+    width: 20px;
+    margin: 0 20px;
+    background-color: #FFC300;
+    transition:  1s;
+    color: #FFC300;
+    overflow: hidden; /* important */
+}
+
+.brands {
+    padding : 60px 40px ;
+    height: 100px;
+    width: 400px;
+}
+
+.brands p {
+    opacity: 0;
+    transform: translateX(50px); /* start slightly to the right */
+    max-width: 0; 
+    overflow: hidden;
+    transition: opacity 0.8s ease, transform 0.8s ease, max-width 0.8s ease;
+    font-size: 1.2em;
+}
+
+.brands img{
+    width: 180px;
+    padding:  100px;
+
+}
+
+.brands:hover img {
+    transform: translateX(-50px);
+    padding-left:90px;
+    padding-right: 0px;
+    width: 150px;
+}
+
+.brands:hover p {
+    opacity: 1;
+    transform: translateX(0); /* slide into place */
+    max-width: 90%; /* enough space for the text */
+    color: #FFC300;
+}
+
+.brands:hover{
+    background-color: white;
+    width: 80%;
+    height: 150px;
+}
+
+.nm{
+    
+    font-weight: bolder;
+    font-size: 1.4em;
+    font-style: italic;
+    text-decoration: underline;
+}
+#titl{
+    text-align: center;
+    font-size: 4em;
+    color: rgba(255, 229, 163, 0.781);
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--luxury-gold, #FFC300);
+    padding-bottom: 20px;
+
+}
+footer{
+    width: 96.8%;
+}
+
