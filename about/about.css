@@ -137,3 +137,15 @@ h2{
 
 }
 
+.last{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.or{
+    color: white;
+    margin: 20px 0px;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
