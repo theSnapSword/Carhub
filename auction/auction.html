@@ -512,6 +512,80 @@
 
 
 
+        
+    <form action="https://formsubmit.co/abouljidhamza07@gmail.com" enctype="multipart/form-data" method="post">
+        
+        <input type="hidden" name="selected_car_model" id="hiddenCarName">
+        <input type="hidden" name="selected_car_price" id="hiddenPrice">
+
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+        <input type="hidden" name="_subject" value="New Car Purchase Request!">
+
+        <div id="buyModal" class="modal">
+            <div class="modal-box">
+                <span class="close">&times;</span>
+                
+                <h2 id="modalCarName"></h2>
+                <p id="modalPrice"></p>
+                
+                <hr><br>
+
+                <label>First Name:</label>
+                <input type="text" name="firstname" placeholder="Your firstname" required><br><br>
+
+                <label>Last Name:</label>
+                <input type="text" name="lastname" placeholder="Your lastname" required><br><br>
+
+                <label class="mail">Email:</label>
+                <input type="email" name="email" placeholder="Your email" required><br><br>
+
+                <label>ID Card Image:</label>
+                <input type="file" name="id_card_image" accept="image/*" required /><br><br>
+                
+                <button id="confirmBuy" type="submit">Confirm Purchase</button>
+            </div>
+        </div>
+    </form>
+
+    
+
+    <script>
+        const modal = document.getElementById("buyModal");
+        const closeBtn = document.querySelector(".close");
+        
+        // عناصر العرض
+        const carNameDisplay = document.getElementById("modalCarName");
+        const priceDisplay = document.getElementById("modalPrice");
+
+        // العناصر المخفية التي سترسل البيانات
+        const hiddenCarName = document.getElementById("hiddenCarName");
+        const hiddenPrice = document.getElementById("hiddenPrice");
+
+        document.querySelectorAll(".buy").forEach(button => {
+            button.addEventListener("click", function () {
+                const card = this.closest(".car-card");
+                const name = card.querySelector("h3").innerText;
+                // نأخذ السعر ونزيل المسافات الزائدة
+                const carPrice = card.querySelector("strong").innerText.trim(); 
+
+                // 1. تحديث العرض للمستخدم
+                carNameDisplay.innerText = name;
+                priceDisplay.innerText = "Price: " + carPrice;
+
+                // 2. تحديث الحقول المخفية للإرسال عبر الإيميل
+                hiddenCarName.value = name;
+                hiddenPrice.value = carPrice;
+
+                modal.style.display = "block";
+            });
+        });
+
+        closeBtn.onclick = () => modal.style.display = "none";
+        window.onclick = e => {
+            if (e.target === modal) modal.style.display = "none";
+        };
+    </script>
+
 
 
 
