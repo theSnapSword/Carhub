@@ -1,13 +1,12 @@
-
 body {
     background-color: black;
     margin: 0;
 
-} 
+}
 
 .qwe {
     height: 100vh;
-} 
+}
 
 header {
     background-color: white;
@@ -15,44 +14,52 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 80px;
-    position: fixed; 
+    position: fixed;
     top: 0;
-    z-index: 100; /* Ensure the header is above everything */
+    z-index: 100;
+    /* Ensure the header is above everything */
 }
-.bord{
+
+.bord {
     border: 2px solid black;
     padding: 5px 15px;
     border-radius: 40px;
     text-align: center;
     transition: all 0.5s;
-    
+
 }
-.bord:hover{
+
+.bord:hover {
     border-color: white;
     background-color: black;
 }
+
 a {
-    text-decoration: none;  
+    text-decoration: none;
     font-weight: bold;
     font-size: 1.5em;
     font-family: 'Courier New', Courier, monospace;
     color: black;
     transition: color 0.55s;
 }
-.bord:hover a{
+
+.bord:hover a {
     color: white;
 }
 
 .back {
     width: 100%;
-    height: 100vh; 
-    
+    height: 100vh;
+
     background-image: url(/images/backgrounds/main.jpg);
 
     /* FIXED BACKGROUND PROPERTIES */
-    background-attachment: fixed; /* kat5eli tswira fblastha o l page katle3 */
-    background-size: cover;      /* tswira takxed mn l9ont tal 9ont */
-    background-position: center; /* tswira katji lwest diyal lpage*/
+    background-attachment: fixed;
+    /* kat5eli tswira fblastha o l page katle3 */
+    background-size: cover;
+    /* tswira takxed mn l9ont tal 9ont */
+    background-position: center;
+    /* tswira katji lwest diyal lpage*/
     background-repeat: no-repeat;
 
     /* Center welcome to carhub inside the .back div */
@@ -61,19 +68,21 @@ a {
     align-items: center;
 }
 
+
 .back h2 {
     color: rgb(255, 255, 255);
     font-size: 4em;
+    text-shadow: 12px 5px 12px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h2{
-    text-shadow: 12px 5px 12px black ;
-    
-}
 
-                /* main body */
 
-main{
+/* main body */
+
+main {
     display: grid;
     align-items: center;
     justify-items: center;
@@ -83,67 +92,50 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    
     border: 3px solid var(--luxury-gold, #FFC300);
     border-radius: 20px;
-    padding: 50%;
-    width: 20px;
-    margin: 0 20px;
-    background-color: #FFC300;
-    transition:  1s;
-    color: #FFC300;
-    overflow: hidden; /* important */
-}
+    margin: 20px auto;
+    /* Centered with auto margins */
+    transition: 1s;
+    overflow: hidden;
 
-.brands {
-    padding : 60px 40px ;
-    height: 100px;
-    width: 400px;
+    /* Applied 'Hover' State permanently */
+    background-color: white;
+    width: 80%;
+    height: auto;
+    min-height: 150px;
+    padding: 30px;
 }
 
 .brands p {
-    opacity: 0;
-    transform: translateX(50px); /* start slightly to the right */
-    max-width: 0; 
-    overflow: hidden;
+    opacity: 1;
+    transform: translateX(0);
+    max-width: 90%;
+    color: black;
     transition: opacity 0.8s ease, transform 0.8s ease, max-width 0.8s ease;
     font-size: 1.2em;
+    line-height: 1.6;
 }
 
-.brands img{
-    width: 180px;
-    padding:  100px;
-
-}
-
-.brands:hover img {
-    transform: translateX(-50px);
-    padding-left:90px;
-    padding-right: 0px;
+.brands img {
+    /* Applied 'Hover' State */
+    transform: translateX(0);
     width: 150px;
+    /* Adjusted padding for cleaner look without hover movement */
+    padding: 0 40px 0 0;
 }
 
-.brands:hover p {
-    opacity: 1;
-    transform: translateX(0); /* slide into place */
-    max-width: 90%; /* enough space for the text */
-    color: #FFC300;
-}
+/* Removed hover selectors as state is permanent */
 
-.brands:hover{
-    background-color: white;
-    width: 80%;
-    height: 150px;
-}
+.nm {
 
-.nm{
-    
     font-weight: bolder;
     font-size: 1.4em;
     font-style: italic;
     text-decoration: underline;
 }
-#titl{
+
+#titl {
     text-align: center;
     font-size: 4em;
     color: rgba(255, 229, 163, 0.781);
@@ -151,9 +143,59 @@ main{
     letter-spacing: 2px;
     border-bottom: 2px solid var(--luxury-gold, #FFC300);
     padding-bottom: 20px;
-
+    margin-top: 80px;
 }
-footer{
+
+footer {
     width: 96.8%;
 }
 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .back h2 {
+        font-size: 2em;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .back {
+        background-attachment: scroll;
+        justify-content: center;
+    }
+
+    #titl {
+        font-size: 2.5em;
+    }
+
+    /* Brands Cards */
+    .brands {
+        width: 85%;
+        height: auto;
+        padding: 30px 20px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    /* Override hover effects for touch devices to show content by default */
+    .brands img {
+        width: 120px;
+        padding: 0;
+        margin-bottom: 20px;
+        transform: none;
+    }
+
+    .brands p {
+        opacity: 1;
+        transform: none;
+        max-width: 100%;
+        color: black;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+}

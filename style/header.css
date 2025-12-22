@@ -1,42 +1,69 @@
                 /* header */
-.qwe {
-    height: 100vh;
-} 
+                .qwe {
+                    height: 100vh;
+                }
 
-header {
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    position: fixed; 
-    top: 0;
-    z-index: 100; /* Ensure the header is above everything */
-}
+                header {
+                    background-color: white;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 80px;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    /* Ensure full width */
+                    z-index: 100;
+                }
 
-.bord{
-    border: 2px solid black;
-    padding: 5px 15px;
-    border-radius: 40px;
-    text-align: center;
-    transition: all 0.5s;
-    
-}
+                .bord {
+                    border: 2px solid black;
+                    padding: 5px 15px;
+                    border-radius: 40px;
+                    text-align: center;
+                    transition: all 0.5s;
+                }
 
-.bord:hover{
-    border-color: white;
-    background-color: black;
-}
+                .bord:hover {
+                    border-color: white;
+                    background-color: black;
+                }
 
-a {
-    text-decoration: none;  
-    font-weight: bold;
-    font-size: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    transition: color 0.55s;
-}
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    font-family: 'Courier New', Courier, monospace;
+                    color: black;
+                    transition: color 0.55s;
+                }
 
-.bord:hover a{
-    color: white;
-}
+                .bord:hover a {
+                    color: white;
+                }
+
+                /* Responsive Header */
+                @media (max-width: 900px) {
+                    header {
+                        height: auto;
+                        padding: 10px 0;
+                        flex-wrap: wrap;
+                        position: relative;
+                        /* Fixed might hide content if it gets too tall, or keep fixed but manage height */
+                    }
+
+                    header>img {
+                        width: 150px;
+                        /* Resize logo */
+                        margin-bottom: 10px;
+                    }
+
+                    .bord {
+                        margin: 5px;
+                        font-size: 0.9em;
+                    }
+
+                    a {
+                        font-size: 1.2em;
+                    }
+                }

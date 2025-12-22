@@ -1,151 +1,242 @@
                 /* main body */
 
 
-body{
-    background-color: rgb(0, 0, 0);
-    margin: 0;
-}
+                body {
+                    background-color: rgb(0, 0, 0);
+                    margin: 0;
+                }
 
-.top{
-    width: 100%;
-    height: 100vh; 
-    background-image: url(/images/backgrounds/main.jpg);
-    background-size: cover;     
-    background-position: center; 
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+                .top {
+                    width: 100%;
+                    height: 100vh;
+                    background-image: url(/images/backgrounds/main.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
 
-h1{
-    font-size: 3em;
-    font-weight: bold;
-    position: relative;
+                h1 {
+                    font-size: 3em;
+                    font-weight: bold;
+                    position: relative;
 
-}
+                }
 
-h3{
-    color: #FFFFFF;
-    font-size: 4em;
-    display: flex;
-    justify-content: center;
-}
+                h3 {
+                    color: #FFFFFF;
+                    font-size: 4em;
+                    display: flex;
+                    justify-content: center;
+                }
 
-.border{
-    
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: black;
-    color: #FFFFFF;
-    transition: 1s;    
-}
-.border:hover{
-    transform: translateY(-8px);  /* Lifts the card */
-    box-shadow: 0 8px 30px #FFC300, 0 0 10px black; /* Adds a subtle gold glow */
-    border-color: black;
-    background-color: #FFFFFF;
-    color: #FFC300;
+                .border {
+
+                    border-radius: 20px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    margin: 50px;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    background-color: black;
+                    color: #FFFFFF;
+                    transition: 1s;
+                }
+
+                .border:hover {
+                    transform: translateY(-8px);
+                    /* Lifts the card */
+                    box-shadow: 0 8px 30px #FFC300, 0 0 10px black;
+                    /* Adds a subtle gold glow */
+                    border-color: black;
+                    background-color: #FFFFFF;
+                    color: #FFC300;
 
 
-}
-h2{
-    align-content: center;
-    
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
+                }
 
-.about{
-    margin: 40px;
-    font-size: 20px;
-    line-height: 1.5em;
-    padding-bottom: 30px;
-}
-.line{
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(153, 153, 153, 0) 100%);
-    color: #FFFFFF;
-}
-.ana{
-    width: 180px;
-    height: 180px;
-    padding: 30px;
-    border-radius: 100% ;
-    
+                h2 {
+                    align-content: center;
 
-}
-.fonder{
-    display: flex;
-    justify-content: center;
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 40px;
+                    padding-bottom: 20px;
+                }
 
-}
-.creator:hover{
-    transform: translateY(-8px); 
-    box-shadow: 0 15px 50px #ffffff, 0 0 10px black; 
-    border-color: black;
-    color: white;
-    background-color: #FFC300; 
+                .about {
+                    margin: 40px;
+                    font-size: 20px;
+                    line-height: 1.5em;
+                    padding-bottom: 30px;
+                }
 
-}
-.creator{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    gap: 20px;
-    width: 50%;
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: black;
-    color: #FFFFFF;
-    transition: 1s;
+                .line {
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(153, 153, 153, 0) 100%);
+                    color: #FFFFFF;
+                }
 
-}
-.link{
-    display: grid;
-    justify-items: center;
-    margin: 50px;
+                .ana {
+                    width: 180px;
+                    height: 180px;
+                    padding: 30px;
+                    border-radius: 100%;
 
-}
-.check{
-    border: 2px solid gold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 20px;
-    color: white;
-    background-color: gold;
-    font-size: 20px;
-    width: 90%;
-    padding: 30px;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    transition: 1s;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.check:hover{
-    background-color: #FFFFFF;
-    color: gold;
-    transform: translateY(-8px);  /* Lifts the card */
-    box-shadow: 0 5px 20px gold, 0 0 10px black; /* Adds a subtle gold glow */
 
-}
+                }
 
-.last{
-    display: flex;
-    justify-content: space-evenly;
-}
+                .fonder {
+                    display: flex;
+                    justify-content: center;
 
-.or{
-    color: white;
-    margin: 20px 0px;
-    font-size: 2em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: lighter;
-}
+                }
+
+                .creator:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 15px 50px #ffffff, 0 0 10px black;
+                    border-color: black;
+                    color: white;
+                    background-color: #FFC300;
+
+                }
+
+                .creator {
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding: 20px;
+                    gap: 20px;
+                    width: 50%;
+                    border-radius: 20px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    margin: 50px;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    background-color: black;
+                    color: #FFFFFF;
+                    transition: 1s;
+
+                }
+
+                .link {
+                    display: grid;
+                    justify-items: center;
+                    margin: 50px;
+
+                }
+
+                .check {
+                    border: 2px solid gold;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    border-radius: 20px;
+                    color: white;
+                    background-color: gold;
+                    font-size: 20px;
+                    width: 90%;
+                    padding: 30px;
+                    margin: 20px;
+                    display: flex;
+                    justify-content: center;
+                    transition: 1s;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .check:hover {
+                    background-color: #FFFFFF;
+                    color: gold;
+                    transform: translateY(-8px);
+                    /* Lifts the card */
+                    box-shadow: 0 5px 20px gold, 0 0 10px black;
+                    /* Adds a subtle gold glow */
+
+                }
+
+                .last {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+
+                .or {
+                    color: white;
+                    margin: 20px 0px;
+                    font-size: 2em;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: lighter;
+                }
+
+                /* Responsive Design */
+                @media (max-width: 768px) {
+
+                    /* Hero Section */
+                    .top {
+                        height: 60vh;
+                        background-attachment: scroll;
+                        justify-content: center;
+                        text-align: center;
+                    }
+
+                    h1 {
+                        font-size: 2em;
+                        padding: 0 10px;
+                    }
+
+                    h3 {
+                        font-size: 2.5em;
+                        /* Reduce from 4em */
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+
+                    /* Content Cards */
+                    .border {
+                        margin: 20px;
+                        padding: 10px;
+                    }
+
+                    .about {
+                        margin: 20px;
+                        font-size: 16px;
+                        /* slightly smaller text */
+                    }
+
+                    .about h2 {
+                        font-size: 1.8em;
+                    }
+
+                    /* Founder Section */
+                    .creator {
+                        flex-direction: column;
+                        width: 90%;
+                        margin: 20px auto;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    .ana {
+                        width: 150px;
+                        height: 150px;
+                        padding: 10px;
+                    }
+
+                    /* Links Section */
+                    .last {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .link {
+                        width: 100%;
+                        margin: 10px 0;
+                    }
+
+                    .check {
+                        width: 80%;
+                        margin: 10px auto;
+                        padding: 15px;
+                        font-size: 16px;
+                    }
+
+                    .or {
+                        margin: 10px 0;
+                    }
+                }
