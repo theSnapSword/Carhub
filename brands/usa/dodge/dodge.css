@@ -1,70 +1,90 @@
                 /* main */
 
-body {
-    background: linear-gradient(180deg, #000000 3.37%, #311515 37.5%, #311515 65.38%, #1A1A1A 100%);
-    color: #FFFFFF;            /* white text for contrast */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+                body {
+                    background: linear-gradient(180deg, #000000 3.37%, #311515 37.5%, #311515 65.38%, #1A1A1A 100%);
+                    color: #FFFFFF;
+                    /* white text for contrast */
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
 
                 /* cards */
 
-section{
-    margin: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;      /*  lcards cayjiw 7da b3diyathom o mli kay3mer sef katenzel automatique */
-}
+                section {
+                    margin: 20px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    /*  lcards cayjiw 7da b3diyathom o mli kay3mer sef katenzel automatique */
+                }
 
-.card-container {
-    display: flex; 
-    justify-content: center; /* Centers the cards horizontally */
-    gap: 40px; /* space between the cards */
-    padding: 50px 20px;
-}
+                .card-container {
+                    display: flex;
+                    justify-content: center;
+                    /* Centers the cards horizontally */
+                    gap: 40px;
+                    /* space between the cards */
+                    padding: 50px 20px;
+                }
 
-.car-card {
-    width: 450px;
-    background: linear-gradient(180deg, #310000 52.4%, #730000 76.92%, rgba(255, 215, 0, 0.57) 100%);
-    border-radius: 12px; 
-    overflow: hidden; /* Ensures that the image fits the rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+                .car-card {
+                    width: 450px;
+                    background: linear-gradient(180deg, #310000 52.4%, #730000 76.92%, rgba(255, 215, 0, 0.57) 100%);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    /* Ensures that the image fits the rounded corners */
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
 
-.car-card:hover {
-    transform: translateY(-8px);  /* Lifts the card */
-    box-shadow: 0 15px 50px #7F8489, 0 0 10px black; /* Adds a subtle gold glow */
-    border-color: black; /* Gold outline on hover */
-}
+                .car-card:hover {
+                    transform: translateY(-8px);
+                    /* Lifts the card */
+                    box-shadow: 0 15px 50px #7F8489, 0 0 10px black;
+                    /* Adds a subtle gold glow */
+                    border-color: black;
+                    /* Gold outline on hover */
+                }
 
 
-.cars{ 
-    width: 100%;
-    height: auto;
-}
+                .cars {
+                    width: 100%;
+                    height: auto;
+                }
 
-.card-body {
-    padding: 25px 30px; 
-}
+                .card-body {
+                    padding: 25px 30px;
+                }
 
-.car-card h3 {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 5px;
-    border-bottom: 2px solid var(--luxury-gold, #FFC300); /* Gold line under the title */
-    display: inline-block;
-    padding-bottom: 5px;
-}
+                .car-card h3 {
+                    font-size: 1.8em;
+                    font-weight: bold;
+                    color: white;
+                    margin-bottom: 5px;
+                    border-bottom: 2px solid var(--luxury-gold, #FFC300);
+                    /* Gold line under the title */
+                    display: inline-block;
+                    padding-bottom: 5px;
+                }
 
-.car-card p {
-    font-size: 1em;
-    color: rgb(0, 0, 0); /* color for description */
-    margin-top: 15px;
-    padding: 8px;
-}
+                .car-card p {
+                    font-size: 1em;
+                    color: rgb(0, 0, 0);
+                    /* color for description */
+                    margin-top: 15px;
+                    padding: 8px;
+                }
 
-span{
-    font-weight: bold;
-}
+                span {
+                    font-weight: bold;
+                }
+
+                /* Scroll Animation */
+                .car-card {
+                    opacity: 0;
+                    /* Hidden initially */
+                }
+
+                .car-card.visible {
+                    animation: fadeInUp 1.5s ease-out forwards;
+                }

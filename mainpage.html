@@ -230,6 +230,25 @@
 
     </main>
 
+    <script>
+        // Scroll Animation Observer
+        document.addEventListener("DOMContentLoaded", function () {
+            const brands = document.querySelectorAll(".brands");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            brands.forEach(brand => observer.observe(brand));
+        });
+    </script>
 </body>
 
 </html>

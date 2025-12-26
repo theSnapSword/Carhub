@@ -1,69 +1,104 @@
-                /* header */
-                .qwe {
-                    height: 100vh;
-                }
+/* Global Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 
-                header {
-                    background-color: white;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 80px;
-                    position: fixed;
-                    top: 0;
-                    width: 100%;
-                    /* Ensure full width */
-                    z-index: 100;
-                }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                .bord {
-                    border: 2px solid black;
-                    padding: 5px 15px;
-                    border-radius: 40px;
-                    text-align: center;
-                    transition: all 0.5s;
-                }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
-                .bord:hover {
-                    border-color: white;
-                    background-color: black;
-                }
+    to {
+        opacity: 1;
+    }
+}
 
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: 1.5em;
-                    font-family: 'Courier New', Courier, monospace;
-                    color: black;
-                    transition: color 0.55s;
-                }
+/* header */
+.qwe {
+    height: 100vh;
+}
 
-                .bord:hover a {
-                    color: white;
-                }
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Ensure full width */
+    z-index: 100;
+}
 
-                /* Responsive Header */
-                @media (max-width: 900px) {
-                    header {
-                        height: auto;
-                        padding: 10px 0;
-                        flex-wrap: wrap;
-                        position: relative;
-                        /* Fixed might hide content if it gets too tall, or keep fixed but manage height */
-                    }
+.bord {
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 40px;
+    text-align: center;
+    transition: all 0.5s;
+}
 
-                    header>img {
-                        width: 150px;
-                        /* Resize logo */
-                        margin-bottom: 10px;
-                    }
+.bord:hover {
+    border-color: white;
+    background-color: black;
+}
 
-                    .bord {
-                        margin: 5px;
-                        font-size: 0.9em;
-                    }
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    transition: color 0.55s;
+}
 
-                    a {
-                        font-size: 1.2em;
-                    }
-                }
+.bord:hover a {
+    color: white;
+}
+
+/* Responsive Header */
+@media (max-width: 900px) {
+    header {
+        height: auto;
+        min-height: 80px;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        position: relative;
+        /* Unfix on mobile if content is too long, or keep fixed if short enough. Let's keep relative to avoid covering content */
+        justify-content: center;
+    }
+
+    header>img {
+        width: 120px;
+        /* Smaller logo */
+        margin: 5px 0;
+        display: block;
+    }
+
+    /* Make navigation items wrap nicely */
+    .bord {
+        margin: 5px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+        flex-grow: 1;
+        /* Allow buttons to grow to fill space */
+        max-width: 120px;
+        /* But not too much */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        font-size: 1.1em;
+    }
+}

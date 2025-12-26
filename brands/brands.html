@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
 </head>
+
 <body>
     <header>
         <img src="/images/logo/logo.png" alt="" width="19%">
@@ -23,7 +25,7 @@
     <br>
     <main>
         <fieldset class="brnds">
-            <legend >
+            <legend>
                 <img src="/brands/flags/france-flag.png" alt="">
                 <p>France</p>
             </legend>
@@ -51,10 +53,10 @@
                 <img src="/brands/car-logos/Mercedes-Logo.png" alt="" class="car-logos">
             </a>
             <a href="/brands/germany/bmw/bmw.html">
-                <img src="/brands/car-logos/bmw-logo.png" alt=""class="car-logos">
+                <img src="/brands/car-logos/bmw-logo.png" alt="" class="car-logos">
             </a>
             <a href="/brands/germany/audi/audi.html">
-                <img src="/brands/car-logos/audi-logo.png" alt=""class="car-logos" id="audi">
+                <img src="/brands/car-logos/audi-logo.png" alt="" class="car-logos" id="audi">
             </a>
             <a href="/brands/germany/porche/porche.html">
                 <img src="/brands/car-logos/porche-logo.png" alt="" class="car-logos" style="width: 160px;">
@@ -120,15 +122,15 @@
                 <img src="/brands/car-logos/tesla.svg" alt="" class="car-logos" id="tesla">
             </a>
         </fieldset>
-        
+
 
     </main>
-        <footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-section logo-section">
                 <div class="logo">CARHUB</div>
-                <p>Your ultimate destination  for exploring<br> the world's 
-                     most prestigious automotive brands<br> and their finest models.</p>
+                <p>Your ultimate destination for exploring<br> the world's
+                    most prestigious automotive brands<br> and their finest models.</p>
             </div>
 
             <div class="emty"></div>
@@ -170,5 +172,24 @@
     </footer>
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const brands = document.querySelectorAll(".brnds");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            brands.forEach(brand => observer.observe(brand));
+        });
+    </script>
 </body>
+
 </html>

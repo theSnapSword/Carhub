@@ -1,9 +1,9 @@
-
-                /* main */
+/* main */
 
 body {
     background: linear-gradient(180deg, #141414 19.23%, #363839 60.58%, #7F8489 85.58%, #FFFFFF 97.12%);
-    color: #FFFFFF;            /* white text for contrast */
+    color: #FFFFFF;
+    /* white text for contrast */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -11,42 +11,49 @@ body {
 
 /* cards */
 
-section{
+section {
     margin: 20px;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;      /*  lcards cayjiw 7da b3diyathom o mli kay3mer sef katenzel automatique */
+    flex-wrap: wrap;
+    /*  lcards cayjiw 7da b3diyathom o mli kay3mer sef katenzel automatique */
 }
 
 .card-container {
-    display: flex; 
-    justify-content: center; /* Centers the cards horizontally */
-    gap: 40px; /* space between the cards */
+    display: flex;
+    justify-content: center;
+    /* Centers the cards horizontally */
+    gap: 40px;
+    /* space between the cards */
     padding: 50px 20px;
 }
 
 .car-card {
     width: 450px;
     background: linear-gradient(180deg, #890000 0%, #890000 47.12%, #FFCC00 100%);
-    border-radius: 12px; 
-    overflow: hidden; /* Ensures that the image fits the rounded corners */
+    border-radius: 12px;
+    overflow: hidden;
+    /* Ensures that the image fits the rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-card:hover {
-    transform: translateY(-8px);  /* Lifts the card */
-    box-shadow: 0 15px 50px darkgoldenrod, 0 0 10px black; /* Adds a subtle gold glow */
-    border-color: black; /* Gold outline on hover */
+    transform: translateY(-8px);
+    /* Lifts the card */
+    box-shadow: 0 15px 50px darkgoldenrod, 0 0 10px black;
+    /* Adds a subtle gold glow */
+    border-color: black;
+    /* Gold outline on hover */
 }
 
 
-.cars{ 
+.cars {
     width: 100%;
     height: auto;
 }
 
 .card-body {
-    padding: 25px 30px; 
+    padding: 25px 30px;
 }
 
 .car-card h3 {
@@ -54,18 +61,30 @@ section{
     font-weight: bold;
     color: white;
     margin-bottom: 5px;
-    border-bottom: 2px solid var(--luxury-gold, #FFC300); /* Gold line under the title */
+    border-bottom: 2px solid var(--luxury-gold, #FFC300);
+    /* Gold line under the title */
     display: inline-block;
     padding-bottom: 5px;
 }
 
 .car-card p {
     font-size: 1em;
-    color: rgb(0, 0, 0); /* color for description */
+    color: rgb(0, 0, 0);
+    /* color for description */
     margin-top: 15px;
     padding: 8px;
 }
 
-span{
+span {
     font-weight: bold;
+}
+
+/* Scroll Animation */
+.car-card {
+    opacity: 0;
+    /* Hidden initially */
+}
+
+.car-card.visible {
+    animation: fadeInUp 1.5s ease-out forwards;
 }

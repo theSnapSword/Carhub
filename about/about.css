@@ -41,6 +41,12 @@
                     background-color: black;
                     color: #FFFFFF;
                     transition: 1s;
+                    opacity: 0;
+                    /* Hidden initially */
+                }
+
+                .border.visible {
+                    animation: fadeInUp 1.5s ease-out forwards;
                 }
 
                 .border:hover {
@@ -115,7 +121,12 @@
                     background-color: black;
                     color: #FFFFFF;
                     transition: 1s;
+                    opacity: 0;
+                    /* Hidden initially */
+                }
 
+                .creator.visible {
+                    animation: fadeInUp 1.5s ease-out forwards;
                 }
 
                 .link {
@@ -139,6 +150,12 @@
                     justify-content: center;
                     transition: 1s;
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    opacity: 0;
+                    /* Hidden initially */
+                }
+
+                .check.visible {
+                    animation: fadeInUp 1.5s ease-out forwards;
                 }
 
                 .check:hover {

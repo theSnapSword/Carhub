@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
 </head>
+
 <body>
     <header>
         <img src="/images/logo/logo.png" alt="" width="19%">
@@ -16,7 +18,7 @@
         <div class="bord"><a href="/about/about.html">Abouts</a></div>
         <div class="bord"><a href="/auction/auction.html">auction</a></div>
         <div class="bord"><a href="/contact/contact.html">Contact</a></div>
-    </header> 
+    </header>
     <br>
     <br>
     <br>
@@ -58,8 +60,8 @@
         <div class="footer-container">
             <div class="footer-section logo-section">
                 <div class="logo">CARHUB</div>
-                <p>Your ultimate destination  for exploring<br> the world's 
-                     most prestigious automotive brands<br> and their finest models.</p>
+                <p>Your ultimate destination for exploring<br> the world's
+                    most prestigious automotive brands<br> and their finest models.</p>
             </div>
 
             <div class="emty"></div>
@@ -99,5 +101,24 @@
             <p>Celebrating Automotive Excellence Worldwide</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contents = document.querySelectorAll(".content");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            contents.forEach(content => observer.observe(content));
+        });
+    </script>
 </body>
+
 </html>

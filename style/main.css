@@ -156,9 +156,11 @@ footer {
 
     /* Hero Section */
     .back h2 {
-        font-size: 2em;
+        font-size: 1.8em;
+        /* Smaller font for better fit */
         text-align: center;
-        padding: 0 10px;
+        padding: 0 15px;
+        line-height: 1.3;
     }
 
     .back {
@@ -167,18 +169,27 @@ footer {
     }
 
     #titl {
-        font-size: 2.5em;
+        font-size: 2em;
+        /* Smaller title */
+        margin-top: 40px;
     }
 
     /* Brands Cards */
     .brands {
-        width: 85%;
+        width: 90%;
+        /* Use more screen width */
         height: auto;
-        padding: 30px 20px;
-        margin: 20px auto;
+        padding: 20px;
+        margin: 15px auto;
         display: flex;
         flex-direction: column;
         border-radius: 15px;
+        opacity: 0;
+        /* Hidden initially */
+    }
+
+    .brands.visible {
+        animation: fadeInUp 1.5s ease-out forwards;
     }
 
     /* Override hover effects for touch devices to show content by default */

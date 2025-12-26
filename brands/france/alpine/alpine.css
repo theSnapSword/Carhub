@@ -84,3 +84,13 @@ video {
     height: 600px;
     margin: 0;
 }
+
+/* Scroll Animation */
+.car-card {
+    opacity: 0;
+    /* Hidden initially */
+}
+
+.car-card.visible {
+    animation: fadeInUp 1.5s ease-out forwards;
+}

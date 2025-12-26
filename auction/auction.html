@@ -598,6 +598,24 @@
         window.onclick = e => {
             if (e.target === modal) modal.style.display = "none";
         };
+
+        // Scroll Animation Observer
+        document.addEventListener("DOMContentLoaded", function () {
+            const carCards = document.querySelectorAll(".car-card");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Run notification only once
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the card is visible
+            });
+
+            carCards.forEach(card => observer.observe(card));
+        });
     </script>
 
 

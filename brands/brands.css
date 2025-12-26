@@ -57,6 +57,12 @@
                     text-align: center;
                     margin: 0 20px;
                     background-color: rgba(23, 23, 75, 0.621);
+                    opacity: 0;
+                    /* Hidden initially */
+                }
+
+                .brnds.visible {
+                    animation: fadeInUp 1.5s ease-out forwards;
                 }
 
                 .brnds p {
