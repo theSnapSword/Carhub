@@ -83,7 +83,9 @@ select {
 /* Car grid */
 .car-grid {
     display: grid;
+    /* It makes your cards flexible. On a wide screen, you might see 4 or 5 cards side-by-side. As you shrink the window, it will drop to 3, then 2, and finally 1 column, all while ensuring each card is at least 250px wide. */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
     gap: 25px;
     padding: 20px;
     max-width: 1200px;

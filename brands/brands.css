@@ -1,294 +1,294 @@
-                /* header */
-                body {
-                    background: linear-gradient(180deg, #0f0f0f, #1b1b1b);
-                    margin: 0;
-                }
+/* header */
+body {
+    background: linear-gradient(180deg, #36454F 1.92%, #36454F 19.71%, #000000 77.4%);
+    margin: 0;
+}
 
-                .qwe {
-                    height: 100vh;
-                }
+.qwe {
+    height: 100vh;
+}
 
-                header {
-                    background-color: white;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 80px;
-                    position: fixed;
-                    top: 0;
-                    z-index: 100;
-                    /* Ensure the header is above everything */
-                }
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    /* Ensure the header is above everything */
+}
 
-                .bord {
-                    border: 2px solid black;
-                    padding: 5px 15px;
-                    border-radius: 40px;
-                    text-align: center;
-                    transition: all 0.5s;
+.bord {
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 40px;
+    text-align: center;
+    transition: all 0.5s;
 
-                }
+}
 
-                .bord:hover {
-                    border-color: white;
-                    background-color: black;
-                }
+.bord:hover {
+    border-color: white;
+    background-color: black;
+}
 
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: 1.5em;
-                    font-family: 'Courier New', Courier, monospace;
-                    color: black;
-                    transition: color 0.55s;
-                }
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    transition: color 0.55s;
+}
 
-                .bord:hover a {
-                    color: white;
-                }
+.bord:hover a {
+    color: white;
+}
 
-                /* main */
+/* main */
 
-                .brnds {
-                    display: flex;
-                    justify-content: space-around;
-                    border: 5px solid black;
-                    border-radius: 25px;
-                    text-align: center;
-                    margin: 0 20px;
-                    background-color: rgba(23, 23, 75, 0.621);
-                    opacity: 0;
-                    /* Hidden initially */
-                }
+.brnds {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    margin: 0 20px;
+background: linear-gradient(180deg, #0A0A0A 0%, #434343 54.81%, #FFFFFF 100%);
+    opacity: 0;
+    /* Hidden initially */
+}
 
-                .brnds.visible {
-                    animation: fadeInUp 1.5s ease-out forwards;
-                }
+.brnds.visible {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
 
-                .brnds p {
-                    color: white;
-                }
+.brnds p {
+    color: white;
+}
 
-                legend {
-                    display: flex;
-                    /* kayjiw 7da be3diyathom */
-                    align-items: center;
-                    justify-content: center;
-                    gap: 10px;
-                    font-size: 1.5em;
-                    font-weight: bold;
-                    padding: 0 10px;
-                }
+legend {
+    display: flex;
+    /* kayjiw 7da be3diyathom */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 10px;
+}
 
-                legend img {
-                    width: 70px;
-                    height: auto;
-                }
+legend img {
+    width: 70px;
+    height: auto;
+}
 
-                .car-logos {
-                    display: flex;
-                    width: 190px;
-                    height: auto;
-                    align-items: center;
-                    padding: 0 10px;
-                    position: relative;
-                    bottom: 12px;
-                }
+.car-logos {
+    display: flex;
+    width: 190px;
+    height: auto;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    bottom: 12px;
+}
 
-                #alpine {
-                    top: 20px;
-                    width: 200px;
-                }
+#alpine {
+    top: 20px;
+    width: 200px;
+}
 
-                #germany {
-                    width: 65px;
-                }
+#germany {
+    width: 65px;
+}
 
-                #audi {
-                    top: 10px;
-                    width: 220px;
-                }
+#audi {
+    top: 10px;
+    width: 220px;
+}
 
-                #japan {
-                    width: 80px;
-                }
+#japan {
+    width: 80px;
+}
 
-                #lexus {
-                    bottom: 18px;
-                    width: 300px;
-                }
+#lexus {
+    bottom: 18px;
+    width: 300px;
+}
 
-                #italy {
-                    width: 60px;
-                }
+#italy {
+    width: 60px;
+}
 
-                #ferrari {
-                    width: 200px;
-                }
+#ferrari {
+    width: 200px;
+}
 
-                #maserati {
-                    top: 10px;
-                    width: 260px;
-                }
+#maserati {
+    top: 10px;
+    width: 260px;
+}
 
-                #pagani {
-                    top: 10px;
-                    width: 260px;
-                }
+#pagani {
+    top: 10px;
+    width: 260px;
+}
 
-                #usa {
-                    width: 85px;
-                }
+#usa {
+    width: 85px;
+}
 
-                #chevrolet {
-                    width: 250px;
-                    top: 20px;
-                }
+#chevrolet {
+    width: 250px;
+    top: 20px;
+}
 
-                #ford {
-                    width: 250px;
-                    top: 35px;
-                }
+#ford {
+    width: 250px;
+    top: 35px;
+}
 
-                #tesla {
-                    width: 140px;
-                }
-
-
-
-                body {
-                    background: linear-gradient(180deg, #0f0f0f, #1b1b1b);
-                }
-
-                .qwe {
-                    height: 100vh;
-                }
-
-                header {
-                    background-color: white;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 80px;
-                    position: fixed;
-                    top: 0;
-                    z-index: 100;
-                    /* Ensure the header is above everything */
-                }
-
-                .bord {
-                    border: 2px solid black;
-                    padding: 5px 15px;
-                    border-radius: 40px;
-                    text-align: center;
-                    transition: all 0.5s;
-
-                }
-
-                .bord:hover {
-                    border-color: white;
-                    background-color: black;
-                }
-
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: 1.5em;
-                    font-family: 'Courier New', Courier, monospace;
-                    color: black;
-                    transition: color 0.55s;
-                }
-
-                .bord:hover a {
-                    color: white;
-                }
-
-                /* main */
-                .about {
-                    text-align: center;
-                    color: white;
-                    background-color: #0b0b0b;
-                    padding: 80px 20px;
-                    border-top: 2px solid gold;
-                    border-bottom: 2px solid gold;
-                }
-
-                .about h2 {
-                    font-size: 2.5rem;
-                    color: gold;
-                    margin-bottom: 20px;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                }
-
-                .about p {
-                    font-size: 1.2rem;
-                    line-height: 1.8;
-                    max-width: 800px;
-                    margin: 0 auto;
-                    color: #e0e0e0;
-                }
+#tesla {
+    width: 140px;
+}
 
 
-                /* Responsive Design */
-                /* Responsive Design */
-                @media (max-width: 768px) {
-                    .brnds {
-                        display: flex;
-                        flex-direction: row;
-                        /* Ensure row alignment */
-                        flex-wrap: wrap;
-                        /* Allow wrapping securely */
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        /* Two equal columns */
-                        justify-items: center;
-                        align-items: center;
-                        gap: 20px;
-                        padding: 20px 10px;
-                        margin: 10px;
-                    }
 
-                    legend {
-                        grid-column: 1 / -1;
-                        /* Make legend span full width */
-                        font-size: 1.5em;
-                        margin-bottom: 10px;
-                    }
+body {
+    background: linear-gradient(180deg, #0f0f0f, #1b1b1b);
+}
 
-                    .car-logos {
-                        width: 100%;
-                        max-width: 170px;
-                        height: 120px !important;
-                        object-fit: contain;
-                        position: static !important;
-                        margin: 0;
-                        transform: none !important;
-                        display: block;
-                    }
+.qwe {
+    height: 100vh;
+}
 
-                    /* Center the links inside grid cells */
-                    .brnds>a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                    }
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    /* Ensure the header is above everything */
+}
 
-                    /* Explicitly reset IDs to override specific desktop styles */
-                    #alpine,
-                    #audi,
-                    #lexus,
-                    #mazda,
-                    #ferrari,
-                    #maserati,
-                    #pagani,
-                    #chevrolet,
-                    #ford,
-                    #tesla {
-                        width: 100%;
-                        max-width: 170px;
-                        top: auto;
-                        bottom: auto;
-                    }
-                }
+.bord {
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 40px;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+.bord:hover {
+    border-color: white;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    transition: color 0.55s;
+}
+
+.bord:hover a {
+    color: white;
+}
+
+/* main */
+.about {
+    text-align: center;
+    color: white;
+    background-color: #0b0b0b;
+    padding: 80px 20px;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: gold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e0e0e0;
+}
+
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brnds {
+        display: flex;
+        flex-direction: row;
+        /* Ensure row alignment */
+        flex-wrap: wrap;
+        /* Allow wrapping securely */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Two equal columns */
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 10px;
+        margin: 10px;
+    }
+
+    legend {
+        grid-column: 1 / -1;
+        /* Make legend span full width */
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .car-logos {
+        width: 100%;
+        max-width: 170px;
+        height: 120px !important;
+        object-fit: contain;
+        position: static !important;
+        margin: 0;
+        transform: none !important;
+        display: block;
+    }
+
+    /* Center the links inside grid cells */
+    .brnds>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Explicitly reset IDs to override specific desktop styles */
+    #alpine,
+    #audi,
+    #lexus,
+    #mazda,
+    #ferrari,
+    #maserati,
+    #pagani,
+    #chevrolet,
+    #ford,
+    #tesla {
+        width: 100%;
+        max-width: 170px;
+        top: auto;
+        bottom: auto;
+    }
+}

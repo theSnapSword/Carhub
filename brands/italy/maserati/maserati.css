@@ -1,7 +1,7 @@
                 /* main */
 
                 body {
-                    background: linear-gradient(180deg, #000000 13.94%, #8B0000 47.12%, #CC9900 85.1%);
+                    background: linear-gradient(180deg, #000000 6.25%, #151B1F 42.31%, #1C2429 58.17%, #36454F 81.73%, rgba(192, 192, 192, 0) 100%);
                     color: #FFFFFF;
                     /* white text for contrast */
                     font-family: 'Arial', sans-serif;
@@ -30,7 +30,7 @@
 
                 .car-card {
                     width: 450px;
-                    background: linear-gradient(180deg, #CC9900 17.31%, #004499 97.12%);
+                    background: linear-gradient(180deg, #36454F 1.92%, #36454F 19.71%, #000000 77.4%);
                     border-radius: 12px;
                     overflow: hidden;
                     /* Ensures that the image fits the rounded corners */
@@ -40,8 +40,7 @@
                 .car-card:hover {
                     transform: translateY(-8px);
                     /* Lifts the card */
-                    box-shadow: 0 15px 50px #ffffff, 0 0 10px black;
-                    /* Adds a subtle gold glow */
+                    box-shadow: 0 15px 50px #91584A, 0 0 10px whitesmoke;
                     border-color: black;
                     /* Gold outline on hover */
                 }
@@ -69,7 +68,7 @@
 
                 .car-card p {
                     font-size: 1em;
-                    color: rgb(0, 0, 0);
+                    color: white;
                     /* color for description */
                     margin-top: 15px;
                     padding: 8px;

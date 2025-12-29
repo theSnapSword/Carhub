@@ -25,7 +25,7 @@ header {
     padding: 5px 15px;
     border-radius: 40px;
     text-align: center;
-    transition: all 0.5s;
+    transition: all 0.1s;
 
 }
 
@@ -95,44 +95,49 @@ main {
     border: 3px solid var(--luxury-gold, #FFC300);
     border-radius: 20px;
     margin: 20px auto;
-    /* Centered with auto margins */
     transition: 1s;
     overflow: hidden;
 
     /* Applied 'Hover' State permanently */
-    background-color: white;
+    background: linear-gradient(180deg, #36454F 1.92%, #36454F 19.71%, #000000 77.4%);
     width: 80%;
     height: auto;
     min-height: 150px;
     padding: 30px;
+    opacity: 0;
+    /* Hidden initially */
+}
+
+.brands:hover {
+    box-shadow: 0 0 20px white;
+}
+
+.brands.visible {
+    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 .brands p {
     opacity: 1;
     transform: translateX(0);
     max-width: 90%;
-    color: black;
+    color: #00aaff;
     transition: opacity 0.8s ease, transform 0.8s ease, max-width 0.8s ease;
     font-size: 1.2em;
     line-height: 1.6;
 }
 
 .brands img {
-    /* Applied 'Hover' State */
     transform: translateX(0);
     width: 150px;
-    /* Adjusted padding for cleaner look without hover movement */
     padding: 0 40px 0 0;
 }
 
-/* Removed hover selectors as state is permanent */
-
 .nm {
-
     font-weight: bolder;
     font-size: 1.4em;
     font-style: italic;
     text-decoration: underline;
+    color: white;
 }
 
 #titl {
@@ -204,7 +209,7 @@ footer {
         opacity: 1;
         transform: none;
         max-width: 100%;
-        color: black;
+        color: #00aaff;
         text-align: center;
         font-size: 1.1em;
         line-height: 1.5;
