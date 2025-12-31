@@ -24,29 +24,36 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(23, 21, 21);
     color: white;
 }
 
 .hero {
-    background: linear-gradient(to bottom, #111, #000);
+    background: transparent;
+    /* Changed from gradient to transparent/image if needed, or keeping simple */
     padding: 60px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 4em;
     letter-spacing: 2px;
-    color: #00aaff;
+    color: white;
+    /* Changed from Blue */
     animation: fadeIn 2.5s ease-out;
+    font-family: 'Georgia', serif;
+    text-shadow: 12px 5px 12px black;
+    text-transform: uppercase;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 1.5em;
     opacity: 0.8;
     font-weight: lighter;
     animation: fadeIn 3s ease-out;
+    color: #FFC300;
+    /* Gold accent */
 }
 
 .search-bar {
@@ -55,11 +62,18 @@ body {
 
 input {
     width: 60%;
-    padding: 12px;
+    padding: 15px;
     border-radius: 30px;
-    border: none;
+    border: 2px solid #FFC300;
     outline: none;
     font-size: 16px;
+    background: #111;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #FFC300;
 }
 
 /* Filters */
@@ -74,33 +88,39 @@ input {
 select {
     padding: 10px 18px;
     border-radius: 20px;
-    border: none;
+    border: 2px solid #FFC300;
     background: #111;
     color: white;
     font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+select:hover {
+    box-shadow: 0 0 10px #FFC300;
 }
 
 /* Car grid */
 .car-grid {
     display: grid;
-    /* It makes your cards flexible. On a wide screen, you might see 4 or 5 cards side-by-side. As you shrink the window, it will drop to 3, then 2, and finally 1 column, all while ensuring each card is at least 250px wide. */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 25px;
-    padding: 20px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Slightly wider min-width */
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
     margin: auto;
 }
 
 .car-card {
-    background: #111;
-    border-radius: 12px;
+    background: linear-gradient(180deg, #36454F 1.92%, #36454F 19.71%, #000000 77.4%);
+    border-radius: 20px;
     overflow: hidden;
-    transition: 0.3s;
-    border: 1px solid #222;
-    border: 1px solid #222;
+    transition: 0.5s;
+    border: 3px solid #FFC300;
     opacity: 0;
     /* Hidden initially */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Class to trigger animation */
@@ -108,195 +128,262 @@ select {
     animation: fadeInUp 1.5s ease-out forwards;
 }
 
-/* Staggered animation delay for cards is handled dynamically or can be kept if elements appear together */
-.car-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.car-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.car-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.car-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.car-card:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.car-card:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
 .car-card:hover {
-    transform: scale(1.04);
-    border-color: #00aaff;
-    box-shadow: 0px 14px 20px #00aaff;
+    transform: translateY(-8px);
+    border-color: white;
+    box-shadow: 0 0 20px white;
+    /* Premium glow */
 }
 
 .car-card img {
     width: 100%;
-    height: 280px;
+    height: 250px;
     object-fit: cover;
+    border-bottom: 3px solid #FFC300;
 }
 
 .car-info {
-    margin: 0 40px;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .car-info h3 {
-    margin: 5px 10px 20px;
-    color: #00aaff;
-
+    margin: 10px 0 20px;
+    color: #FFC300;
+    /* Gold Brand Title */
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    text-decoration: underline;
+    text-decoration-color: white;
 }
 
 .car-info p {
-    margin: 25px 0;
-    opacity: 0.8;
-    font-size: 14px;
+    margin: 15px 0;
+    color: #00aaff;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
 }
 
 span {
-    font-size: 1.2em;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
 }
 
-.btn {
-    display: block;
-    margin-top: 10px;
-    background: #00aaff;
-    color: black;
-    padding: 10px;
-    text-align: center;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
+strong {
+    color: #FFC300;
+    font-size: 1.2em;
 }
 
 #old {
     text-decoration: line-through;
+    color: #888;
+    font-size: 1em;
 }
 
 .buy-btn {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .buy {
-    width: 100px;
+    width: 150px;
     height: 50px;
     border-radius: 40px;
-    background-color: #ffffff;
-    transition: 0.7s ease;
+    background: linear-gradient(180deg, #36454F 0%, #000000 100%);
+    border: 2px solid #FFC300;
+    color: white;
+    transition: 0.5s ease;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 .buy:hover {
-    transform: translateY(-10px);
-    background-color: #6490ff;
-    box-shadow: 0px 7px 20px #0048ff;
+    transform: scale(1.05);
+    background: black;
+    border-color: white;
+    box-shadow: 0 0 15px #FFC300;
+    color: #FFC300;
 }
 
-
-
+/* Modal */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
     z-index: 999;
 }
 
 .modal-box {
-    background: #111;
+    background: linear-gradient(180deg, #36454F 0%, #000000 100%);
+    border: 3px solid #FFC300;
     color: white;
-    width: 320px;
-    padding: 25px;
-    border-radius: 15px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    box-shadow: 0 0 30px rgba(255, 195, 0, 0.3);
+    max-height: 85vh;
+    /* Ensure it fits on screen */
+    overflow-y: auto;
+    /* Enable scrolling if content is too tall */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE/Edge */
+}
+
+/* Hide scrollbar for Chrome/Safari/Opera */
+.modal-box::-webkit-scrollbar {
+    display: none;
 }
 
 .close {
     position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 22px;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    /* Smaller */
     cursor: pointer;
+    color: #FFC300;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-box h2 {
+    font-size: 1.5em;
+    margin: 5px 0 10px;
 }
 
 #confirmBuy {
     margin-top: 15px;
-    padding: 10px 20px;
+    /* Reduced */
+    padding: 10px 25px;
+    /* Reduced */
     border-radius: 25px;
-    border: none;
+    border: 2px solid #FFC300;
+    background: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9em;
+}
+
+#confirmBuy:hover {
+    background: #FFC300;
+    color: black;
+    box-shadow: 0 0 15px #FFC300;
+}
+
+label {
+    color: #FFC300;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    /* Reduced */
+    text-align: left;
+    font-size: 0.9em;
+}
+
+/* Input overrides for modal */
+.modal-box input {
+    width: 90%;
+    margin-top: 5px;
+    border-color: #555;
+    padding: 8px;
+    /* Override global padding */
+    font-size: 14px;
+    /* Smaller font */
+    height: auto;
+    /* Ensure height adjusts */
+}
+
+.modal-box input:focus {
+    border-color: #FFC300;
+}
+
+/* File Input Styling */
+.modal-box input[type="file"] {
+    padding: 10px;
+    background: transparent;
+    border: 2px dashed #FFC300;
+    color: white;
     cursor: pointer;
 }
 
-.mail {
-    margin-right: 35px;
-    margin-bottom: 20px;
+.modal-box input[type="file"]::file-selector-button {
+    background: #FFC300;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal-box input[type="file"]::-webkit-file-upload-button {
+    background: #FFC300;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal-box input[type="file"]::file-selector-button:hover {
+    background: white;
+    color: black;
+}
+
+.modal-box input[type="file"]::-webkit-file-upload-button:hover {
+    background: white;
+    color: black;
 }
 
 @media (max-width: 768px) {
-
-    /* Hero Section */
     .hero h1 {
-        font-size: 32px;
+        font-size: 2.5em;
     }
 
     .hero p {
-        font-size: 16px;
-    }
-
-    input {
-        width: 90%;
-    }
-
-    .filters {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    select {
-        width: 80%;
+        font-size: 1.2em;
     }
 
     .car-grid {
         grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 20px;
-    }
-
-    .car-card {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .modal-box {
-        width: 90%;
-        max-width: 320px;
-        position: fixed;
         padding: 20px;
     }
 
-    .buy-btn {
-        margin-bottom: 20px;
+    .car-card {
+        max-width: 100%;
     }
 
-
+    .modal-box {
+        width: 85%;
+    }
 }
