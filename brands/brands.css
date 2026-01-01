@@ -56,7 +56,7 @@ a {
     border-radius: 25px;
     text-align: center;
     margin: 0 20px;
-background: linear-gradient(180deg, #0A0A0A 0%, #434343 54.81%, #FFFFFF 100%);
+    background: linear-gradient(180deg, #0A0A0A 0%, #434343 54.81%, #FFFFFF 100%);
     opacity: 0;
     /* Hidden initially */
 }

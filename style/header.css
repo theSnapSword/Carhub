@@ -1,4 +1,16 @@
 /* Global Animations */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -68,37 +80,117 @@ a {
 /* Responsive Header */
 @media (max-width: 900px) {
     header {
-        height: auto;
-        min-height: 80px;
-        padding: 10px 0;
-        flex-wrap: wrap;
-        position: relative;
-        /* Unfix on mobile if content is too long, or keep fixed if short enough. Let's keep relative to avoid covering content */
-        justify-content: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 80px;
     }
 
-    header>img {
-        width: 120px;
-        /* Smaller logo */
-        margin: 5px 0;
-        display: block;
-    }
-
-    /* Make navigation items wrap nicely */
-    .bord {
-        margin: 5px;
-        padding: 5px 10px;
-        font-size: 0.8em;
-        flex-grow: 1;
-        /* Allow buttons to grow to fill space */
-        max-width: 120px;
-        /* But not too much */
+    /* Wrap links in a container */
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 80px;
+        background-color: white;
+        /* Ensure background is opaque */
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        /* Or could be 50% */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 99;
+        /* Center content vertically if desired, or top padding */
+        padding-top: 50px;
+    }
+
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    /* Adjust link items */
+    .bord {
+        opacity: 0;
+        /* Animate in */
+        margin: 20px 0;
+        width: 50%;
+        /* Wider buttons */
+    }
+
+    /* Animate links when active */
+    .nav-links.active .bord {
+        opacity: 1;
+        transition: opacity 0.5s ease-in 0.3s;
+    }
+
+    /* Hamburger Menu Icon */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .hamburger div {
+        width: 18px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Toggle Animation */
+    .hamburger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .hamburger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Hide hamburger on Desktop */
+@media (min-width: 901px) {
+    .hamburger {
+        display: none;
+    }
+
+    /* Ensure nav links flow horizontally */
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
         align-items: center;
     }
+}
 
-    a {
-        font-size: 1.1em;
+/* Global Responsive Fix for Brand Pages */
+@media (max-width: 768px) {
+
+    /* Override fixed width 450px in brand CSS files */
+    .car-card {
+        width: 90% !important;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .card-container {
+        padding: 20px 0 !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        margin: 10px !important;
+    }
+
+    .cars {
+        width: 100% !important;
+        height: auto !important;
     }
 }
